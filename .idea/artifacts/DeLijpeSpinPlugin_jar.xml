@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="DeLijpeSpinPlugin:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DeLijpeSpinPlugin_jar</output-path>
+    <root id="archive" name="DeLijpeSpinPlugin.jar">
+      <element id="module-output" name="DeLijpeSpinPlugin" />
+      <element id="library" level="project" name="craftbukkit" />
+    </root>
+  </artifact>
+</component>
