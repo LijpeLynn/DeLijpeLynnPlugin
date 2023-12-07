@@ -1,5 +1,7 @@
 package lijpe.spin.commands;
 
+import net.minecraft.server.ItemBlock;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -30,15 +32,15 @@ public class HandAlsHoedCommand  implements CommandExecutor {
         // Krijg het item in de hand van de sender
         ItemStack handItem = player.getInventory().getItemInHand();
 
+        if(handItem == null)
+            return false;
+
         // Krijg het huidige helmet van de target speler
         ItemStack currentHelmet = targetPlayer.getInventory().getHelmet();
 
         // Als de target speler een helmet heeft, plaats het in zijn inventaris
-        if (currentHelmet != null) {
-            if (!targetPlayer.getInventory().addItem(currentHelmet).isEmpty()) {
-                // Als het inventory vol is, drop het item op de locatie van de speler
-                targetPlayer.getWorld().dropItemNaturally(targetPlayer.getLocation(), currentHelmet);
-            }
+        if (currentHelmet != null && currentHelmet.getType() != Material.AIR) {
+            targetPlayer.getWorld().dropItemNaturally(targetPlayer.getLocation(), currentHelmet);
         }
 
         // Plaats het item in de hand van de sender als een helmet op de target speler
@@ -46,7 +48,7 @@ public class HandAlsHoedCommand  implements CommandExecutor {
 
         player.getInventory().setItemInHand(null);
 
-        sender.sendMessage("Je hebt "+ player.getDisplayName() +" geprankt door deze een bijzondere hoed te schenken, haha hilarisch!" + targetPlayer.getName());
+        sender.sendMessage("Je hebt "+ player.getDisplayName() +" geprankt door deze een bijzondere hoed te schenken, haha hilarisch " + targetPlayer.getName()+"!");
 
         return true;
     }
