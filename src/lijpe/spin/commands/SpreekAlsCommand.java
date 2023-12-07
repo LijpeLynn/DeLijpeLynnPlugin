@@ -20,7 +20,12 @@ public class SpreekAlsCommand implements CommandExecutor {
             return true;
         }
 
-        targetPlayer.chat(args[1]);
+        String msg = "";
+        for (int i = 1; i < args.length-1; i++)
+            msg += args[i]+" ";
+        msg += args[args.length-1];
+
+        targetPlayer.chat(msg);
 
         return true;
     }
