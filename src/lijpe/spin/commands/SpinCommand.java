@@ -1,6 +1,7 @@
 package lijpe.spin.commands;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -18,14 +19,14 @@ public class SpinCommand implements CommandExecutor {
             @SuppressWarnings("unchecked")
             Map<String, Map<String, Object>> commands = (Map<String, Map<String, Object>>) commandsObject;
 
-            sender.sendMessage("§e==================");
-            sender.sendMessage("§e[De Lijpe Spin Plugin]");
-            sender.sendMessage("§e==================");
+            sender.sendMessage(ChatColor.GOLD+"§e==================");
+            sender.sendMessage(ChatColor.GOLD+"§e[De Lijpe Spin Plugin]");
+            sender.sendMessage(ChatColor.GOLD+"§e==================");
 
             for (String commandName : commands.keySet()) {
                 Map<String, Object> commandInfo = commands.get(commandName);
-                String usage = (String) commandInfo.get("usage");
-                String descriptionStr = (String) commandInfo.get("description");
+                String usage = ChatColor.GREEN+(String) commandInfo.get("usage");
+                String descriptionStr = ChatColor.WHITE+(String) commandInfo.get("description");
 
                 sender.sendMessage(usage + ": " + descriptionStr);
             }

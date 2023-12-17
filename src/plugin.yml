@@ -12,7 +12,7 @@ commands:
     permission-message: Jij mag dit niet doen met je kop!
   welkom:
     description: Heet een speler welkom.
-    usage: /welkom <player>
+    usage: /welkom <speler>
     permission: lijpelynn.welkom
     permission-message: Jij mag dit niet doen met je kop!
   bedtijd:
@@ -22,11 +22,41 @@ commands:
     permission-message: Jij mag dit niet doen met je kop!
   handalshoed:
     description: Zet het item dat je in je hand hebt als hoed van een speler. Hilarische prank.
-    usage: /handalshoed <player>
+    usage: /handalshoed <speler>
     permission: lijpelynn.handalshoed
     permission-message: Jij mag dit niet doen met je kop!
   spreekals:
     description: Neem de tong over van een speler. Hilarische prank.
-    usage: /spreekals <player> <text>
+    usage: /spreekals <speler> <text>
     permission: lijpelynn.spreekals
+    permission-message: Jij mag dit niet doen met je kop!
+  weer:
+    description: Manipuleer het weer!
+    usage: /weer <mooi|regen|onweer>
+    permission: lijpelynn.weer
+    permission-message: Jij mag dit niet doen met je kop!
+  meld:
+    description: Meld een belangrijk bericht!
+    usage: /meld [quotes]<servicenaam>[quotes] <bericht>
+    permission: lijpelynn.meld
+    permission-message: Jij mag dit niet doen met je kop!
+  poep:
+    description: Poep lekker of laat een ander lekker poepen!
+    usage: /poep of /poep <rotvlees|bloemen> of /poep <rotvlees|bloemen> <speler>
+    permission: lijpelynn.poep
+    permission-message: Jij mag dit niet doen met je kop!
+  hernoem:
+    description: Geef een speler een betere naam!
+    usage: /hernoem <bijnaam> of /hernoem <speler> <bijnaam>
+    permission: lijpelynn.hernoem
+    permission-message: Jij mag dit niet doen met je kop!
+  prank:
+    description: Prank!
+    usage: /prank
+    permission: lijpelynn.prank
+    permission-message: Jij mag dit niet doen met je kop!
+  ophoofdvan:
+    description: Ga op iemands hoofd zitten!
+    usage: /ophoofdvan <speler>
+    permission: lijpelynn.ophoofdvan
     permission-message: Jij mag dit niet doen met je kop!

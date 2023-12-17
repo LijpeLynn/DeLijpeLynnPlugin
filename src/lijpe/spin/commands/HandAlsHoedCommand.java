@@ -48,7 +48,7 @@ public class HandAlsHoedCommand  implements CommandExecutor {
 
         player.getInventory().setItemInHand(null);
 
-        sender.sendMessage("Je hebt "+ player.getDisplayName() +" geprankt door deze een bijzondere hoed te schenken, haha hilarisch " + targetPlayer.getName()+"!");
+        sender.sendMessage("Je hebt "+ targetPlayer.getDisplayName() +" geprankt door deze een bijzondere hoed te schenken, haha hilarisch " + player.getDisplayName()+"!");
 
         return true;
     }

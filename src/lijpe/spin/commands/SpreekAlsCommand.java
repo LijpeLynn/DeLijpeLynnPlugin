@@ -1,5 +1,7 @@
 package lijpe.spin.commands;
 
+import lijpe.spin.Main;
+import lijpe.spin.helpers.Messaging;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -20,12 +22,7 @@ public class SpreekAlsCommand implements CommandExecutor {
             return true;
         }
 
-        String msg = "";
-        for (int i = 1; i < args.length-1; i++)
-            msg += args[i]+" ";
-        msg += args[args.length-1];
-
-        targetPlayer.chat(msg);
+        targetPlayer.chat(Messaging.GetMessageFromArgs(args));
 
         return true;
     }
